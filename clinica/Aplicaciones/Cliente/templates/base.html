@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %} La Eterna Primavera {% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/stylebase.css' %}">
+    <!-- CSS de BootStrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <!-- Iconos de Font-Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital@1&family=Mooli&family=Roboto:wght@100&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    
+    <nav>
+        <div class="contains">
+            <nav class="nav-main">
+                {% load static %}
+                <img src="{% static 'img/doctorina.png' %}" alt="PaginaWeb" class="nav-paisaje">
+
+                <h1>La Eterna Primavera</h1>
+                <ul>
+                    <li>
+                        <a href="#">
+                        <i class="fa fa-search"></i>
+                        </a>
+                    </li>
+                </ul>
+           
+            </nav>
+        </div>
+     </nav>
+
+    {% block body %}
+    
+    <!--Showcase-->
+    <header class="Showcase">
+        <img src="{% static 'img/medicina.jpg' %}" alt="Medico" class="medico">
+    </header>
+    
+    <!--Separadores-->
+    <div class="separador1">
+        <div class="imagen_medicina">
+            <img src="{% static 'img/familia.jpg' %}" alt="La Eterna Primavera" class="otra-foto">
+        </div>
+        <div class="sobre-clinica">
+            <h3>NUESTRAS CLÍNICAS</h3>
+            <p>Atención para toda la familia, con espacios amplios y modernos y con la más alta tecnología para diagnóstico y tratamiento en más de 20 especialidades.</p>
+        </div>
+    </div>
+    <div class="separador2">
+        <div class="pacientes">
+            <a><i class="fa-regular fa-user"></i></a>
+            <h3>PACIENTES</h3>
+            <a href="/agregarPaciente/" class="boton">REGISTRAR</a>
+        </div>
+        <div class="empleados">
+            <a><i class="fa-solid fa-stethoscope"></i></a>
+            <h3>MEDICOS</h3>
+            <p></p>
+            <a href="/agregarEmpleado/" class="boton">REGISTRAR</a>
+        </div>
+        <div class="consultas">
+            <a><i class="fa-regular fa-folder-open"></i></a>
+            <h3>CONSULTAS</h3>
+            <p></p>
+            <a href="/agregarConsulta/" class="boton">REGISTRAR</a>
+        </div>
+    </div>
+    <div class="separador3">
+        <div class="sobre-nosotros">
+            <h3>ESPECIALIDADES</h3>
+            <p>Atendemos en más de 20 especialidades médicas, desde pediatría hasta cardiología. Cada uno de nuestros doctores son especialistas en su campo</p>
+        </div>
+        <div class="imagen-clinica">
+            <img src="{% static 'img/clinica.jpg' %}" alt="La Eterna Primavera" class="clinic">
+        </div>
+    </div>
+
+    {% endblock %}
+
+    <footer class="pie-pagina">
+        <div class="informacion">
+            <div class="box1">
+                <h2>Siguenos para Más</h2>
+                <a onclick="location.href='https://www.facebook.com'"><i class="fa-brands fa-square-facebook"></i></a>
+                <a onclick="location.href='https://www.instagram.com/'"></i><i class="fa-brands fa-square-instagram"></i></i></a>
+                <a onclick="location.href='https://www.whatsapp.com/?lang=es_LA'"></a>
+            </div>
+            <div class="box2">
+                <h2>Contactanos</h2>
+                <p><i class="fa-regular fa-envelope"></i> E-mail: eternaprimaveramd@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> Llamanos al: ****-****</p>
+                <p><i class="fab fa-whatsapp"></i> Escribenos al: (502) ****-****</p>
+            </div>
+        </div>
+        <div class="exclusivo">
+            <p>Está pagina es pureamente para funciones escolares, no tiene nada que ver con una clínica real.</p>
+            <h3>@Copyright</h3>
+        </div>   
+    </footer>
+ 
+</body>
+</html>
